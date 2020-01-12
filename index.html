@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#333333">
+    <title>Geng Shuang Emulator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="reset-form.css?v2" rel="stylesheet">
+    <link href="base.css?v2" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Geng Shuang <br/>Emulator</h1>
+    <small class="label" id="label-lang">语言</small>
+    <select id="lang" onchange="changeLang(this.value)">
+        <option value="sc">简体</option>
+        <option value="tc">繁體</option>
+    </select>
+    <small class="label" id="label-n">发言对象：</small><input type="text" id="1">
+    <small class="label" id="label-b">对方干了什么事情：</small><input type="text" id="2">
+    <small class="label" id="label-attitude">态度：</small>
+    <input type="radio" name ="attitude" id="r1" value="support"><label for="support" id="label-support">支持</label>
+    <input type="radio" name ="attitude" id="r2" value="condemn" checked><label for="condemn" id="label-condemn">谴责</label>
+    <div class="actions">
+        <div class="button clickable" id="btn-generate" onclick="generate()">外交部发言人耿爽答记者问</div>
+        <img class="shuffle clickable" onclick="random()" src="shuffle.svg">
+    </div>
+    <div id="text"></div>
+    <img class="slogan" src="footer.svg">
+    <p class="about">作者的话：这只是本人一时突发奇想随手写的一个项目而已，没想到居然颇受欢迎。在此感谢所有对项目作出贡献的热心网友。（具体贡献情况可见 Github 页面）</p>
+    <p class="about">另外，欢迎来到<a class="clickable" href="https://pincong.rocks">新品葱</a>论坛（需翻墙），在自由的阳光下各抒己见。</p>
+    <p class="about">本实验不带有政治诉求或企图，请勿过度解读 · <a class="clickable" href="https://github.com/xwgmdjc/GengShuang">View on GitHub</a></p>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #222;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+a, a:link, a:hover, a:visited, a:active {
+    color: inherit;
+}
